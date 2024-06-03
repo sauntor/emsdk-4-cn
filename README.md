@@ -11,7 +11,7 @@
 ### 复制emsdk到本地
 > 请自行替换`podman`/`docker`命令
 ```shell
-docker run -n emsdk-4-cn -d ghcr.dockerproxy.com/sauntor/emsdk-4-cn
+docker run --name emsdk-4-cn -d ghcr.dockerproxy.com/sauntor/emsdk-4-cn
 # 假设要把emsdk复制到$HOME
 docker container cp emsdk-4-cn:/opt/emsdk ~/emsdk
 docker rm -f emsdk-4-cn

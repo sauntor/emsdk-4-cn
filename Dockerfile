@@ -1,6 +1,7 @@
 FROM opensuse/tumbleweed
 
 ENV EMSDK_VERBOSE=1
+ENV EMSDK_KEEP_DOWNLOADS=1
 ENV EMSDK_PYTHON=/usr/bin/python3
 
 RUN zypper dup -yl \

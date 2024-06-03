@@ -10,8 +10,5 @@ RUN git clone https://github.com/emscripten-core/emsdk.git /opt/emsdk
 ENV EMSDK_VERBOSE=1
 ENV EMSDK_PYTHON=/usr/bin/python3
 WORKDIR /opt/emsdk
-RUN ./emsdk install 2.0.14 \
-    && ./emsdk install 3.1.14 \
-    && ./emsdk install 3.1.25 \
-    && ./emsdk install 3.1.37 \
+RUN ./emsdk install 3.1.25 \
     && ./emsdk install 3.1.50

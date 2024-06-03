@@ -5,6 +5,7 @@
 
 ### 下载镜像
 > 请自行替换`podman`/`docker`命令
+
 `docker pull ghcr.dockerproxy.com/sauntor/emsdk-4-cn`
 
 ### 复制emsdk到本地
@@ -19,11 +20,7 @@ docker rm -f emsdk-4-cn
 # 默认包含的`emsdk`版本
 |适配的`Qt`版本 | `emsdk`版本 |
 |--------|-------------|
-| 6.2    | 2.0.14      |
-| 6.3    | 3.0.0       |
-| 6.4    | 3.1.14      |
 | 6.5    | 3.1.25      |
-| 6.6    | 3.1.37      |
 | 6.7    | 3.1.50      |
 
 > 参考 https://doc.qt.io/qt-6/wasm.html#installing-emscripten
@@ -31,4 +28,4 @@ docker rm -f emsdk-4-cn
 ### 定制`emsdk`版本
 1. 在`GitHub`上`Fork`此项目
 2. 在`Fork`到你名下的项目中修改[`Dockerfile`](Dockerfile#L13)，移除不需要/添加需要的版本
-3. 将上面`下载镜像`复制`emsdk到本地`步骤中的`sauntor`替换成你的`GitHub`用户名
+3. 将上面`下载镜像`及`复制emsdk到本地`步骤中的`sauntor`替换成你的`GitHub`用户名

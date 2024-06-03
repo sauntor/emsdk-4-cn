@@ -1,0 +1,35 @@
+name: Build GHCR Image
+
+on:
+  push:
+    branches:
+      - '*'
+    tags:
+      - 'v*'
+
+permissions:
+  packages: write
+  contents: read
+
+jobs:
+  docker-tumbleweed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GHCR-Action
+        uses: KuhlTime/ghcr-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+  # docker-windows_2019:
+  #   runs-on: windows-2019
+  #   steps:
+  #     - name: GHCR-Action
+  #       uses: KuhlTime/ghcr-action@v1
+  #       with:
+  #         token: ${{ secrets.GITHUB_TOKEN }}
+  # docker-macos_12:
+  #   runs-on: macos-12
+  #   steps:
+  #     - name: GHCR-Action
+  #       uses: KuhlTime/ghcr-action@v1
+  #       with:
+  #         token: ${{ secrets.GITHUB_TOKEN }}

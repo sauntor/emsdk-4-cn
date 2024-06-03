@@ -1,6 +1,6 @@
 # emsdk-4-cn
 为不能/不想FQ的中国大陆用户提供emsdk的下载解决方案，主要用于支持`Qt for WebAssembly`，
-若为其他用途，可以自行定制emsdk`版本
+若为其他用途，可以自行[定制`emsdk`版本](#定制emsdk版本)
 > 目前至仅支持 `Linux x86_64`
 
 ### 下载镜像
@@ -28,7 +28,7 @@ docker rm -f emsdk-4-cn
 
 > 参考 https://doc.qt.io/qt-6/wasm.html#installing-emscripten
 
-### 定制`emsdk`
+### 定制`emsdk`版本
 1. 在`GitHub`上`Fork`此项目
 2. 在`Fork`到你名下的项目中修改[`Dockerfile`](Dockerfile#L13)，移除不需要/添加需要的版本
-3. 将上面步骤的`下载镜像`复制`emsdk到本地`中的`sauntor`替换成你的`GitHub`用户名
+3. 将上面`下载镜像`复制`emsdk到本地`步骤中的`sauntor`替换成你的`GitHub`用户名

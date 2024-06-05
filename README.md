@@ -3,19 +3,41 @@
 若为其他用途，可以自行[定制`emsdk`版本](#定制emsdk版本)
 > 目前至仅支持 `Linux x86_64`
 
-### 下载镜像
-> 请自行替换`podman`/`docker`命令
+### 安装
+> 请确保系统已安装`podman`或`docker`
 
-`docker pull ghcr.dockerproxy.com/sauntor/emsdk-4-cn`
-
-### 复制emsdk到本地
-> 请自行替换`podman`/`docker`命令
+##### 1. 下载或`Clone`此项目（二选一）
 ```shell
-docker run --name emsdk-4-cn -d ghcr.dockerproxy.com/sauntor/emsdk-4-cn
-# 假设要把emsdk复制到$HOME
-docker container cp emsdk-4-cn:/opt/emsdk ~/emsdk
-docker rm -f emsdk-4-cn
+# 直接下载
+wget -O emsdk-4-cn.zip \
+    https://github.com/sauntor/emsdk-4-cn/archive/refs/heads/main.zip
+# 解压
+unzip emsdk-4-cn.zip
+
+# 或者
+
+# 使用Git克隆
+git clone https://github.com/sauntor/emsdk-4-cn.git
+
 ```
+##### 2. 下载`emsdk`
+> 请把`/path/to/emsdk-4-cn`换成目标安装目录
+```shell
+cd emsdk-4-cn
+./download.sh /path/to/emsdk-4-cn
+```
+
+##### 3. 启用`emsdk`版本
+> 以 `3.1.25` 为例
+```shell
+cd /path/to/emsdk-4-cn
+./cn-install.sh 3.1.25
+./cn-activate.sh 3.1.25
+```
+
+##### 4. 使用`emsdk`
+> `emsdk`的路径`/path/to/emsdk-4-cn/emscripten`
+
 
 # 默认包含的`emsdk`版本
 |适配的`Qt`版本 | `emsdk`版本 |
@@ -27,5 +49,7 @@ docker rm -f emsdk-4-cn
 
 ### 定制`emsdk`版本
 1. 在`GitHub`上`Fork`此项目
-2. 在`Fork`到你名下的项目中修改[`Dockerfile`](Dockerfile#L13)，移除不需要/添加需要的版本
-3. 将上面`下载镜像`及`复制emsdk到本地`步骤中的`sauntor`替换成你的`GitHub`用户名
+2. 在`Fork`到你名下的项目中修改[`Dockerfile`](Dockerfile#L16)，
+   移除不需要/添加需要 的版本
+3. 将你的`GitHub`用户名替换到[`.github/username`](.github/username)，
+   示例：`echo monster > .github/username`

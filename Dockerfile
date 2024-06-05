@@ -13,5 +13,5 @@ RUN zypper dup -yl \
     && zypper clean -a
 
 RUN git clone https://github.com/emscripten-core/emsdk.git emscripten
-RUN cn-install.sh 3.1.25 \
-    && cn-install.sh 3.1.50
+RUN ./cn-install.sh 3.1.25 \
+    && ./cn-install.sh 3.1.50

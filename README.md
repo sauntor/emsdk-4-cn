@@ -1,4 +1,4 @@
-# emsdk-4-cn
+# emsdk-4-cn [![Build GHCR Image](https://github.com/sauntor/emsdk-4-cn/actions/workflows/ci.yml/badge.svg)](https://github.com/sauntor/emsdk-4-cn/actions/workflows/ci.yml)
 为不能/不想FQ的中国大陆用户提供emsdk的下载解决方案，主要用于支持`Qt for WebAssembly`，
 若为其他用途，可以自行[定制`emsdk`版本](#定制emsdk版本)
 > 目前至仅支持 `Linux x86_64`
